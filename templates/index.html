@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Generator</title>
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            width: 150px;
+        }
+        .form-row input, .form-row textarea {
+            width: 200px;
+            margin-left: 10px;
+        }
+        .form-row textarea {
+            height: 60px;
+        }
+        .form-row input[type="file"] {
+            width: auto;
+        }
+        .form-row input[type="number"] {
+            width: 60px;
+            margin-left: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>输入客人信息</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <label for="order_number">订单号：</label>
+            <input type="text" id="order_number" name="order_number" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="customer_name">客人名称：</label>
+            <input type="text" id="customer_name" name="customer_name" maxlength="15" required>
+            <label for="name_font_size">字号：</label>
+            <input type="number" id="name_font_size" name="name_font_size" placeholder="12">
+        </div>
+        
+        <div class="form-row">
+            <label for="customer_info">客人信息：</label>
+            <textarea id="customer_info" name="customer_info" required></textarea>
+            <label for="customer_info_font_size">字号：</label>
+            <input type="number" id="customer_info_font_size" name="customer_info_font_size" placeholder="12">
+        </div>
+        
+        <div class="form-row">
+            <label for="made_in">中国制造标注：</label>
+            <input type="text" id="made_in" name="made_in" placeholder="MADE IN CHINA">
+            <label for="made_in_font_size">字号：</label>
+            <input type="number" id="made_in_font_size" name="made_in_font_size" placeholder="12">
+        </div>
+        
+        <div class="form-row">
+            <label for="product_info_font_size">产品信息字号：</label>
+            <input type="number" id="product_info_font_size" name="product_info_font_size" placeholder="12">
+        </div>
+        
+        <div class="form-row">
+            <label for="product_quantity_font_size">产品数量字号：</label>
+            <input type="number" id="product_quantity_font_size" name="product_quantity_font_size" placeholder="12">
+        </div>
+        
+        <div class="form-row">
+            <label for="file">上传产品信息：</label>
+            <input type="file" id="file" name="file" required>
+        </div>
+        
+        <button type="submit">生成唛头</button>
+    </form>
+</body>
+</html>

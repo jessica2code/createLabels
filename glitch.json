@@ -1,0 +1,22 @@
+{
+    "install": "pip install -r requirements.txt",
+    "start": "python3 app.py",
+    "watch": {
+      "ignore": [
+        "\\.pyc$",
+        "^.git/"
+      ],
+      "install": {
+        "include": [
+          "^requirements\\.txt$"
+        ]
+      },
+      "restart": {
+        "include": [
+          "^app\\.py$",
+          "^templates/"
+        ]
+      },
+      "throttle": 300
+    }
+  }
